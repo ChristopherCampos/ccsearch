@@ -1,0 +1,4 @@
+"""
+Folder searching related functions.
+"""
+

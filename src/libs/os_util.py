@@ -5,7 +5,7 @@ OS related functions.
 from os import listdir, path
 
 
-def get_visible_files_from_dir(directory) -> list:
+def get_visible_files_from_dir(directory, hidden=False) -> list:
     """Gets a list of all files in a directory"""
     file_list = list()
     for current_directory in listdir(directory):
