@@ -19,7 +19,8 @@ def main():
                                                                             "folders are searched")
     args = parser.parse_args()
     if args.phrase is not None:
-        if args.recursive:
+        print(args)
+        if args.recursive and args.directory:
             pass
         else:
             file_list = get_visible_files_from_dir(CURRENT_DIR)
