@@ -7,8 +7,8 @@ from src.libs.color_util import FILE_COLOR, RESET_COLOR, ORANGE_COLOR
 def search_file(file_dir, phrase) -> str:
     """Searches through a single file given a specific phrase"""
     stdout = ""
-    with open(file_dir, "r") as fhandle:
-        lines = fhandle.readlines()
+    with open(file_dir, "r") as file_handle:
+        lines = file_handle.readlines()
         for index, line in enumerate(lines):
             line = line.strip()
             if phrase in line:
