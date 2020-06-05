@@ -12,7 +12,7 @@ def search_file(file_dir, phrase) -> str:
         for index, line in enumerate(lines):
             line = line.strip()
             if phrase in line:
-                stdout += format_line(index, line, phrase)
+                stdout += format_line(index + 1, line, phrase)
     if len(stdout) > 0:
         stdout = format_file_name(file_dir) + stdout
     return stdout
