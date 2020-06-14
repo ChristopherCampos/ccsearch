@@ -6,12 +6,12 @@ throughout readable files in a given directory.
 
 ## Usage
 ```
-python 
+python -m src.cli [-h] [-d D] [-r] P
 ```
 ## Options
-=======
-#Options
 
 --recursion -r | Searches recursively through the directories in the main directory.
 
 --directory -d | Searches through the specified directory.
+
+--help -h | Shows help message

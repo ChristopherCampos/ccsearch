@@ -5,6 +5,7 @@ from src.libs.file_search_util import search_file
 from src.libs.os_util import get_visible_files_from_dir, get_recursive_files_from_dir
 from src.libs.color_util import ERROR_COLOR, RESET_COLOR
 import sys
+import colorama
 """Advanced file search program"""
 '''Options -r recursive'''
 
@@ -24,8 +25,11 @@ def main():
     parser.add_argument("-r", "--recursive", action="store_true", help="Declares whether the folders within "
                                                                        "folders are searched"
                         )
+
     args = parser.parse_args()
 
+    colorama.init()
+    print("Searching with CCSearch.\n")
     if args.phrase is not None:
         if args.directory:
             selected_dir = args.directory
